@@ -26,8 +26,8 @@ const SignUpScreen = () => {
         <div className="signUpScreen">
            <form>
                 <h1>Sign In</h1>
-                <input ref={emailRef} type="email" placeholder="Email" />
-                <input ref={passwordRef} type="password" placeholder="Password" />
+                <input ref={emailRef} type="email" required placeholder="Email" />
+                <input ref={passwordRef} type="password" required placeholder="Password" />
                 <button type="submit" onClick={toSignIn}>Sign In</button>
 
                 <h4>

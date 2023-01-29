@@ -17,12 +17,10 @@ const SignUpForm = () => {
             loginPageEmail,
             passwordRef.current.value
         ).then((authUser)=>{
-            console.log(authUser);
+            navigate('/');
         }).catch(error => {
             alert(error.message);
         });
-
-        navigate('/');
 
     }; 
     
@@ -31,17 +29,14 @@ const SignUpForm = () => {
         <>
             <Nav additional__class="nav__bottomBorder"/>
             <div className="signUpForm">
-            <form>
+            <form onSubmit={()=>{}}>
                     <h1>Welcome Back! Joining Netflix is easy</h1>
                     <h3>Enter your password and you'll be watching in no time.</h3>
                     <span className="email__prompt">Email</span>
                     <h4>{loginPageEmail}</h4>
-                    <input ref={passwordRef} type="password" placeholder="Enter your password" />
+
+                    <input ref={passwordRef} type="password" required placeholder="Enter your password" />
                     <button type="submit" onClick={register}>Sign Up</button>
-
-                    <h4>
-
-                    </h4>
             </form>
             </div>
         </>
