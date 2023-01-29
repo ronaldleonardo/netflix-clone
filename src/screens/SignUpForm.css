@@ -1,0 +1,70 @@
+.signUpForm {
+    max-width: 330px;
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(255, 255, 255);
+    margin-top: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.signUpForm > form {
+    display: grid;
+    flex-direction: column;
+}
+
+.signUpForm > form > h1 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+
+.signUpForm > form > h3 {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.signUpForm > form > h4 {
+    text-align: left;
+    margin-bottom: 15px;
+    padding-left: 15px;
+}
+
+.signUpForm > form > input {
+    outline-width: 0;
+    height: 40px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+}
+
+.signUpForm > form > button {
+    padding: 16px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #e50914;
+    margin-bottom: 30px;
+    
+}
+
+.nav__bottomBorder {
+    border-bottom: rgb(192, 192, 192) solid 1px;
+}
+
+.email__prompt{
+    padding-bottom: 10px;
+}

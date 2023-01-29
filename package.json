@@ -38,7 +38,11 @@
     ]
   },
   "devDependencies": {
+    "@stripe/stripe-js": "^1.46.0",
     "axios": "^1.2.5",
-    "firebase": "^9.16.0"
+    "firebase": "^8.10.1",
+    "movie-trailer": "^3.0.0",
+    "react-router-dom": "^6.8.0",
+    "react-youtube": "^10.1.0"
   }
 }

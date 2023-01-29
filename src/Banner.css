@@ -3,6 +3,7 @@
     height: 610px;
     color: white;
     object-fit: contain;
+    margin-bottom: 30px;
 } 
 
 .banner__contents {

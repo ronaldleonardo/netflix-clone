@@ -8,7 +8,7 @@ const Banner = () =>{
     const [movie, setMovie] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
-            const request = await axios.get(requests.fetchNetflix0riginals);
+            const request = await axios.get(requests.fetchTrending);
             setMovie(
                 request.data.results[
                     Math.floor(Math.random() * request.data.results.length -1)
@@ -19,8 +19,6 @@ const Banner = () =>{
 
         fetchData()
     },[])
-    console.log(movie);
-
     const truncate = (string, n) =>{
         return string?.length > n ? string.substring(0, n-1) + '...' : string;
     }
@@ -38,7 +36,7 @@ const Banner = () =>{
                 </h1>
                 <div className="banner__buttons">
                     <button className="banner__button">Play</button>
-                    <button className="banner__button">My List</button>
+                    <button className="banner__button">Trailer</button>
                 </div>
                 <h1 className="banner__description">
                     {
