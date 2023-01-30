@@ -102,3 +102,56 @@
 .loginScreen__input {
     margin: 20px;
 }
+
+
+
+
+@media only screen and (max-width: 600px){
+    .loginScreen__button{
+        padding: 10px 15px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #e50914;
+        font-weight: 600;
+        border-radius: 0.4vw;
+    
+    }
+
+
+    .loginScreen__body{
+        top: 20%;
+        
+    }
+
+
+    .loginScreen__body > h1 {
+        font-size: 2rem;
+        margin-bottom: 15 px;
+    }
+
+    .loginScreen__body > h2 {
+        font-size: 1.2rem;
+        margin-bottom: 20px
+    }
+
+    .loginScreen__body > h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        width: 85%;
+        margin: auto;
+    }
+
+    .loginScreen__input > form > input {
+        width: 100%;
+        border-radius: 0.6vw;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    .loginScreen__getStarted {
+        font-size: 0.8rem;
+        border-radius: 0.6vw;
+        margin-left: 1rem;
+
+    }
+};

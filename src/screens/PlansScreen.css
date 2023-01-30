@@ -25,3 +25,21 @@
 .plansScreen__plan--disabled > button {
     background-color: gray !important;
 }
+
+
+
+@media only screen and (max-width: 420px){
+    .plansScreen__plan {
+        display: block;
+    }
+
+    .plansScreen__info{
+        margin-bottom: 10px;
+    }
+
+    .plansScreen__plan > button {
+        padding: 5px 5px 5px 5px;
+        font-size: 0.8rem;
+    }
+
+}

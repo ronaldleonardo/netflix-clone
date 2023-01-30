@@ -53,3 +53,14 @@
     background-color: #e50914;
     margin-bottom: 30px;
 }
+
+
+@media only screen and (max-width: 600px){
+    .signInScreen {
+        padding: 40px;
+        margin-top: -70px;
+    }
+
+
+
+}

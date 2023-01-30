@@ -41,7 +41,7 @@ const Banner = () =>{
                     </div>
                     <h1 className="banner__description">
                         {
-                            truncate(movie?.overview,230)
+                            truncate(movie?.overview,200)
                         }
                     </h1>
                 </div>
