@@ -3,7 +3,8 @@
     color: white;
     left: 0;
     right: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 
 }
 

@@ -38,8 +38,8 @@
     }
 
     .plansScreen__plan > button {
-        padding: 5px 5px 5px 5px;
-        font-size: 0.8rem;
+        padding: 8px 8px 8px 8px;
+        font-size: 0.9rem;
     }
 
 }
