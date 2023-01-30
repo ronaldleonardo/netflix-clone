@@ -28,7 +28,7 @@ const PlansScreen = () => {
                     current_period_start: subscription.data().current_period_start.seconds,
                 })
             })
-        })
+        });
     },[user.uid])
 
     useEffect(() => {

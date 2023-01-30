@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import SignUpScreen from './SignUpScreen';
+import SignInScreen from './SignInScreen';
 import { useNavigate } from 'react-router-dom';
 
 import './LoginScreen.css';
@@ -44,7 +44,7 @@ const LoginScreen = () => {
 
             <div className='loginScreen__body'>
                 {signIn ? (
-                    <SignUpScreen/>
+                    <SignInScreen/>
                 ): (
                     <>
                         <h1>Unlimited films, TV programmes and more.</h1>

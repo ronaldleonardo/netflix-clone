@@ -33,6 +33,7 @@
     object-fit: contain;
     padding-left: 20px;
     cursor: pointer;
+    margin-right: 20px;
 } 
 
 .navlink__avatar{

@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { auth } from "../firebase";
-import './SignUpScreen.css';
+import './SignInScreen.css';
 
-const SignUpScreen = () => {
+const SignInScreen = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
@@ -23,7 +23,7 @@ const SignUpScreen = () => {
     };
 
     return(
-        <div className="signUpScreen">
+        <div className="signInScreen">
            <form>
                 <h1>Sign In</h1>
                 <input ref={emailRef} type="email" required placeholder="Email" />
@@ -31,12 +31,12 @@ const SignUpScreen = () => {
                 <button type="submit" onClick={toSignIn}>Sign In</button>
 
                 <h4>
-                    <span className="signUpScreen__gray">New to Netflix? </span>
-                    <span className="signUpScreen__link" onClick={toHome}>Sign Up now.</span> 
+                    <span className="signInScreen__gray">New to Netflix? </span>
+                    <span className="signInScreen__link" onClick={toHome}>Sign Up now.</span> 
                 </h4>
            </form>
         </div>
     );
 };
 
-export default SignUpScreen;
+export default SignInScreen;

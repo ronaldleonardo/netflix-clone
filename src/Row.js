@@ -22,7 +22,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
   }, [fetchUrl]);
 
   const opts = {
-    height: "550",
+    height: "530",
     width: "100%",
     playerVars: {
       autoplay: 0,
@@ -64,7 +64,11 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
             )
         )}
       </div>
-      {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
+      {trailerUrl && (
+        <div className="row__youtube">
+          <YouTube videoId={trailerUrl} opts={opts} />
+        </div>
+        )}
     </div>
   );
 };

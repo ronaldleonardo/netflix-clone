@@ -27,7 +27,7 @@ const SignUpForm = () => {
 
     return(
         <>
-            <Nav additional__class="nav__bottomBorder"/>
+            <Nav additional__class="nav__bottomBorder nav__noProfile"/>
             <div className="signUpForm">
             <form onSubmit={()=>{}}>
                     <h1>Welcome Back! Joining Netflix is easy</h1>

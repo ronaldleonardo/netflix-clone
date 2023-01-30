@@ -43,6 +43,7 @@
     width: 150px;
     object-fit: contain;
     padding-left: 20px;
+    margin-top: 10px;
 }
 
 
@@ -74,6 +75,8 @@
     z-index: 1;
     color: #fff;
     padding: 20px;
+    box-sizing: border-box;
+
 }
 
 .loginScreen__input > form > input {
