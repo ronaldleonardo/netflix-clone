@@ -30,13 +30,12 @@ function App() {
         );
       } else {
         dispatch(logout());
-
       }
     });
     return unsubscribe;
   }, [dispatch]);
 
-  
+
   return (
     <div className="app">
       <Routes>
@@ -52,3 +51,5 @@ function App() {
 }
 
 export default App;
+
+

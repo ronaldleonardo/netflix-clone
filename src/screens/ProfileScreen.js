@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase';
 import { selectUser } from '../features/userSlice';
@@ -7,9 +7,11 @@ import { selectUser } from '../features/userSlice';
 import Nav from '../Nav';
 import PlansScreen from './PlansScreen';
 import './ProfileScreen.css';
+import { unsubscribed } from '../features/subscriptionSlice';
 
 const ProfileScreen = () => {
     const user = useSelector(selectUser);
+    const dispatch = useDispatch();
 
     return(
         <div className='profileScreen'>
@@ -30,7 +32,10 @@ const ProfileScreen = () => {
                             <Link to='/'>
                                 <button 
                                     className='profileScreen__signOut'
-                                    onClick={() => auth.signOut()}>
+                                    onClick={() => {
+                                        dispatch(unsubscribed());
+                                        auth.signOut();
+                                        }}>
                                         Sign Out
                                 </button>
                             </Link>
