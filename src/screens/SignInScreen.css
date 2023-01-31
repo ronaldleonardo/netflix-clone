@@ -22,11 +22,11 @@
     margin-bottom: 30px;
 }
 
-.signInScreen__gray {
+.signUpScreen__gray {
     color: gray;
 }
 
-.signInScreen__link:hover {
+.signUpScreen__link:hover {
     cursor: pointer;
     text-decoration: underline;
     
