@@ -7,6 +7,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import db from '../firebase';
 
 import './PlansScreen.css';
+import Loader from '../Loader';
 
 
 
@@ -14,6 +15,8 @@ const PlansScreen = () => {
     const [products, setProducts] = useState([]);
     const user = useSelector(selectUser);
     const [subscription, setSubscription] = useState(null);
+    const [isLoadingButton, setIsLoadingButton] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         db.collection('customers')
@@ -29,6 +32,7 @@ const PlansScreen = () => {
                 })
             })
         });
+
     },[user.uid])
 
     useEffect(() => {
@@ -48,10 +52,15 @@ const PlansScreen = () => {
                 });
             });
             setProducts(products);
+            setIsLoading(false);
+
         });
+
     },[]);
 
     const loadCheckout = async (priceId) => {
+        setIsLoadingButton(true);
+
         const docRef = await db
         .collection('customers')
         .doc(user.uid)
@@ -76,8 +85,10 @@ const PlansScreen = () => {
                 // Init Stripe
 
                 const stripe = await loadStripe('pk_test_51MVVt5EbST6SUaYMRSxlwJbMiYH6Fe2J84Fcav1BIVwiOs8vWVztALUwec3UiCBZrQClSdvbilK9GV7utcgeAjNd00rf27EM1K');
-                stripe.redirectToCheckout({ sessionId });
+                stripe.redirectToCheckout({ sessionId });   
             }
+            setIsLoadingButton(false);
+
         });
 
     };
@@ -85,6 +96,11 @@ const PlansScreen = () => {
     return(
         <div className='plansScreen'>
             <br />
+
+            <div className='plansScreen__loader'>
+               {isLoading && <Loader/>}
+            </div>
+
             {subscription && (
             <p>
                 Renewal date: {' '} 
@@ -93,7 +109,6 @@ const PlansScreen = () => {
                     ).toLocaleDateString()} 
             </p>
             )}
-
             {Object.entries(products).map(([productId, productData]) => {
                 // add some logic to check if user subs is active
                 const isCurrentPackage = productData.name
@@ -106,10 +121,13 @@ const PlansScreen = () => {
                             <h5>{productData.name}</h5>
                             <h6>{productData.description}</h6>
                         </div>
-
-                        <button onClick={() => !isCurrentPackage && loadCheckout(productData?.prices?.priceId)}>
+                        {!isLoadingButton &&  <button onClick={() => !isCurrentPackage && loadCheckout(productData?.prices?.priceId)}>
                             {isCurrentPackage ? 'Current Package' : 'Subscribe'}
-                        </button>
+                        </button>}
+                        {isLoadingButton &&  <button disabled>
+                            <Loader/>
+                        </button>}
+                       
                     </div>
                 );
             })}

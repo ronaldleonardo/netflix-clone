@@ -1,20 +1,26 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { auth } from "../firebase";
+import Loader from "../Loader";
 import './SignInScreen.css';
 
 const SignInScreen = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+    const [isLoadingButton, setIsLoadingButton] = useState(false);
+
 
     const toSignIn = (e) => {
+        setIsLoadingButton(true);
         e.preventDefault();
         auth.signInWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value,
         ).then((authUser) => {
-            console.log(authUser);
+            setIsLoadingButton(false);
         }).catch((error) => {
+            setIsLoadingButton(false);
             alert(error.message);
+
         });
     };
 
@@ -28,7 +34,9 @@ const SignInScreen = () => {
                 <h1>Sign In</h1>
                 <input ref={emailRef} type="email" required placeholder="Email" />
                 <input ref={passwordRef} type="password" required placeholder="Password" />
-                <button type="submit" onClick={toSignIn}>Sign In</button>
+                
+                {!isLoadingButton && <button type="submit" onClick={toSignIn}>Sign In</button>}
+                {isLoadingButton && <button disabled><Loader/></button>}
 
                 <h4>
                     <span className="signInScreen__gray">New to Netflix? </span>

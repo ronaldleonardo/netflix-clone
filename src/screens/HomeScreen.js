@@ -46,7 +46,6 @@ const HomeScreen = () => {
                    fetchUrl={requests.fetchTrending}
                    isLargeRow
                    />
-                   
                    <Row title='Top Rated' fetchUrl={requests.fetchTopRated}/>
                    <Row title='Netflix Originals' fetchUrl={requests.fetchNetflix0riginals}/>
                    <Row title='Action Movies' fetchUrl={requests.fetchActionMovies}/>

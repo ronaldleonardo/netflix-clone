@@ -25,7 +25,7 @@ const Row = ({ title, fetchUrl, isLargeRow = false }) => {
     height: "530",
     width: "100%",
     playerVars: {
-      autoplay: 0,
+      autoplay: 1,
     },
   };
 

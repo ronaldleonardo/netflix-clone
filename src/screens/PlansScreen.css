@@ -6,6 +6,10 @@
     
 }
 
+.plansScreen__loader{
+    margin-bottom: 20px;
+}
+
 .plansScreen__plan:hover{
     opacity: 1;
 }
@@ -21,6 +25,8 @@
     border-radius: 5px;
 
 }
+
+
 
 .plansScreen__plan--disabled > button {
     background-color: gray !important;
@@ -42,4 +48,7 @@
         font-size: 0.9rem;
     }
 
+    .plansScreen__loader{
+        display: flex;
+    }
 }
