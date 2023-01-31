@@ -60,6 +60,10 @@
     cursor: pointer;
 }
 
+.profileScreen__signOut:hover {
+    background-color: #9b080f;
+}
+
 .profileScreen__info > .profileScreen__imageContainer > img {
     height: 100px;
 }

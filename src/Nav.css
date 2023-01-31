@@ -24,6 +24,10 @@
     cursor: pointer;
 }
 
+.navlink__logo:hover{
+    opacity: 0.8;
+}
+
 .nav__logo{
     position: fixed;
     top: 19px;
@@ -48,4 +52,8 @@
     cursor: pointer;
     opacity: 0.8;
     border-radius: 5px;
+}
+
+.navlink__avatar:hover{
+    opacity: 0.6;
 }

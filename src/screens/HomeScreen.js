@@ -33,7 +33,7 @@ const HomeScreen = () => {
                 }))
             })
         })
-    },[user.uid])
+    },[user.uid, dispatch])
 
 	return (
         <div>

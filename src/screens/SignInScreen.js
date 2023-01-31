@@ -39,8 +39,8 @@ const SignInScreen = () => {
                 {isLoadingButton && <button disabled><Loader/></button>}
 
                 <h4>
-                    <span className="signInScreen__gray">New to Netflix? </span>
-                    <span className="signInScreen__link" onClick={toHome}>Sign Up now.</span> 
+                    <span className="signUpScreen__gray">New to Netflix? </span>
+                    <span className="signUpScreen__link" onClick={toHome}>Sign Up now.</span> 
                 </h4>
            </form>
         </div>

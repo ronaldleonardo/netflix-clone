@@ -26,6 +26,12 @@
 
 }
 
+.plansScreen__plan > button:hover {
+    background-color: #9b080f;
+
+}
+
+
 
 
 .plansScreen__plan--disabled > button {

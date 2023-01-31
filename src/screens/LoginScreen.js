@@ -38,8 +38,8 @@ const LoginScreen = () => {
                     onClick={()=> setSignIn(true)}>
                     Sign In
                 </button>
-
                 <div className='loginScreen__gradient' />
+
             </div>
 
             <div className='loginScreen__body'>
@@ -60,6 +60,7 @@ const LoginScreen = () => {
                     </>    
                 )}
             </div>
+
         </div>
 
     );

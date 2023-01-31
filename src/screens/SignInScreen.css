@@ -50,10 +50,13 @@
     border: none;
     cursor: pointer;
     margin-top: 20px;
-    background-color: #e50914;
+    background-color: #ff000d;
     margin-bottom: 30px;
 }
 
+.signInScreen > form > button:hover {
+    background-color: #9b080f;
+}
 
 @media only screen and (max-width: 600px){
     .signInScreen {
